@@ -34,11 +34,4 @@ class AuthController extends Controller
             'token'   => $result['token'],
         ]);
     }
-
-    public function logout(Request $request)
-    {
-        $this->authService->logout($request->user());
-
-        return ApiResponse::success(null, 'Logged out successfully');
-    }
 }
